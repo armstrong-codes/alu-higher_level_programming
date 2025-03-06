@@ -1,0 +1,15 @@
+o
+    §9Vc†  ã                   @   s"   d Z edƒjZG dd„ deƒZdS )z
+more class base
+z7-base_geometryc                   @   s(   e Zd ZdZdd„ Zdd„ Zdd „ ZdS )	Ú	Rectanglez definition of a Rectangle c                 C   s0   || _ || _t | d| j ¡ t | d| j¡ dS )z constructor and width, heightÚwidthÚheightN)Ú_Rectangle__widthÚ_Rectangle__heightÚBaseGeometryÚinteger_validator)Úselfr   r   © r	   úd/data/data/com.termux/files/home/alx-higher_level_programming/0x0A-python-inheritance/9-rectangle.pyÚ__init__   s   zRectangle.__init__c                 C   s   | j | j S )N)r   r   ©r   r	   r	   r
+   Úarea   s   zRectangle.areac                 C   s   dt | jƒ d t | jƒ S )z  print z[Rectangle] ú/)Ústrr   r   r   r	   r	   r
+   Ú __str__   s   zRectangle.__str__N) Ú__name__Ú
+__module__Ú__qualname__Ú __doc__r
+   r
+   r   r	   r	   r	   r
+   r   
+   s
+     r   N)r   Ú
+__import__r   r   r	   r	   r	   r
+   Ú<module>   s   
+
