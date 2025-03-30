@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-"""Fetches url
-using the request moduel
+"""Sends a request to a given URL and displays the response body.
+
+Usage: ./3-error_code.py <URL>
+  - Handles HTTP errors.
 """
-import requests
+import sys
+import urllib.error
+import urllib.request
 
 
 if __name__ == "__main__":
-    url = 'https://intranet.hbtn.io/status'
-    if url.startswith('https://'):
-        url = "https://alu-intranet.hbtn.io/status"
-    res = requests.get(url)
-    print("Body response:")
-    print("\t- type: {}".format(type(res.text)))
-    print("\t- content: {}".format(res.text))
+    url = sys.argv[1]
+
+    request = urllib.request.Request(url)
+    try:
+        with urllib.request.urlopen(request) as response:
+            print(response.read().decode("ascii"))
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))
