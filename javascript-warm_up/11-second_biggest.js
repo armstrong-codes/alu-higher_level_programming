@@ -8,4 +8,3 @@ if (args.length < 2) {
   const uniqueSorted = [...new Set(args)].sort((a, b) => b - a);
   console.log(uniqueSorted[1]);
 }
-
